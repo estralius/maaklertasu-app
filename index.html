@@ -377,13 +377,6 @@ input[type="range"]::-moz-range-thumb {
   width: 220px; height: 220px;
   background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
 }
-.result-summary::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: -40px;
-  width: 180px; height: 180px;
-  background: radial-gradient(circle, rgba(255,182,39,0.18) 0%, transparent 65%);
-}
 .result-block { position: relative; }
 .result-label {
   font-size: 11px;
@@ -522,7 +515,7 @@ input[type="range"]::-moz-range-thumb {
 
       <div class="calc-input">
         <div class="calc-input-label">Kinnisvara hind</div>
-        <input type="text" id="calc-price" value="200 000" inputmode="numeric" autocomplete="off">
+        <input type="text" id="calc-price" value="100 000" inputmode="numeric" autocomplete="off">
         <div class="calc-input-currency">EUR</div>
       </div>
 
@@ -538,15 +531,15 @@ input[type="range"]::-moz-range-thumb {
 
           <div id="pct-mode">
             <div style="display: flex; justify-content: flex-end; margin-bottom: 8px;">
-              <span class="control-label-value" id="commission-display">3,0%</span>
+              <span class="control-label-value" id="commission-display">4,0%</span>
             </div>
-            <input type="range" id="commission-slider" min="0.5" max="8" step="0.1" value="3">
+            <input type="range" id="commission-slider" min="0.5" max="8" step="0.1" value="4">
             <div class="control-helper" id="pct-helper">= 6 000,00 EUR (ilma KM-ta)</div>
           </div>
 
           <div id="eur-mode" class="hidden">
             <div class="eur-input-wrap">
-              <input type="text" id="commission-eur" value="6 000" inputmode="numeric" autocomplete="off">
+              <input type="text" id="commission-eur" value="4 000" inputmode="numeric" autocomplete="off">
               <span class="eur-suffix">EUR</span>
             </div>
             <div class="control-helper" id="eur-helper">= 3,00% kinnisvara hinnast</div>
@@ -597,7 +590,7 @@ input[type="range"]::-moz-range-thumb {
 
       <div class="calc-input">
         <div class="calc-input-label">Müügihind</div>
-        <input type="text" id="notar-price" value="200 000" inputmode="numeric" autocomplete="off">
+        <input type="text" id="notar-price" value="100 000" inputmode="numeric" autocomplete="off">
         <div class="calc-input-currency">EUR</div>
       </div>
 
@@ -616,7 +609,7 @@ input[type="range"]::-moz-range-thumb {
             <span class="control-label-text">Hüpoteegi summa</span>
           </div>
           <div class="eur-input-wrap">
-            <input type="text" id="mortgage-amount" value="160 000" inputmode="numeric" autocomplete="off">
+            <input type="text" id="mortgage-amount" value="80 000" inputmode="numeric" autocomplete="off">
             <span class="eur-suffix">EUR</span>
           </div>
           <div class="control-helper">Tehinguväärtus = 2/3 hüpoteegi summast</div>
@@ -645,7 +638,7 @@ input[type="range"]::-moz-range-thumb {
             <span class="control-label-text">Hoiustamise summa</span>
           </div>
           <div class="eur-input-wrap">
-            <input type="text" id="deposit-amount" value="200 000" inputmode="numeric" autocomplete="off">
+            <input type="text" id="deposit-amount" value="100 000" inputmode="numeric" autocomplete="off">
             <span class="eur-suffix">EUR</span>
           </div>
         </div>
@@ -975,6 +968,10 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+
+<!-- Cloudflare Web Analytics (asenda TOKEN_PLACEHOLDER päris tokeniga peale Pages deploy lõpetamist) -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "TOKEN_PLACEHOLDER"}'></script>
+<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>
