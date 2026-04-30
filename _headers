@@ -1,0 +1,19 @@
+# Cloudflare Pages headerid
+# Service worker - ära cache'i (et uuendused jõuaks kohe kasutajateni)
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Manifest - lühike cache
+/manifest.json
+  Cache-Control: public, max-age=3600
+
+# HTML - lühike cache
+/index.html
+  Cache-Control: public, max-age=3600
+
+/
+  Cache-Control: public, max-age=3600
+
+# Ikoonid - pikem cache
+/icon-*.png
+  Cache-Control: public, max-age=86400
